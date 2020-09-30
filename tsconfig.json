@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    // https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#support-for-import-d-from-cjs-form-commonjs-modules-with---esmoduleinterop
+    "esModuleInterop": true,
+    //"rootDir": "src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "typeRoots": [ "types", "node_modules/@types", "types/external"],
+    
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
+    "paths": {
+      "bot/*": ["./server/bot/*"]
+    }
+  },
+  
+  "include": ["server/**/*", "src/**/*", "types/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/__mocks__/*.ts"],
+  //"files": ["types/index.d.ts"]
+}
