@@ -7,13 +7,7 @@
 //    bot what's the time? - Tells you the time
 //
 module.exports = (robot) => {
-  robot.respond(/(what time is it|what's the time)/gi, (res) => {
-    const d = new Date()
-    const t = `${d.getHours()}:${d.getMinutes()} and ${d.getSeconds()} seconds`
-    res.reply(`It's ${t}`)
-  })
-
   robot.respond(/(hello)/gi, (res) => {
-    res.reply('hello world!')
+    res.reply('Hello world!')
   })
 }
